@@ -11,7 +11,7 @@ const getUser = async(req, res) => {
 
 }
 const getHome = (req, res) => {
-	res.render('admin/get-user', { title: 'Admin'});
+	res.render('home', { title: 'Admin'});
 }
 const deleteUser = async(req, res) => {
 	const userId = req.params.id 

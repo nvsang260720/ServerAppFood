@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const CategoryController = require('../controller/Api/CategoryController')
-const BannerController = require('../controller/Api/BannerController')
-const SearchController = require('../controller/Api/SearchController')
+const BannerController = require('../../controller/api/BannerController')
+const SearchController = require('../../controller/Api/SearchController')
 
 router.post('/add-banner', BannerController.addBanner)
 

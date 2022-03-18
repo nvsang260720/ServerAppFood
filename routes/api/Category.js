@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const CategoryController = require('../controller/Api/CategoryController')
+const CategoryController = require('../../controller/Api/CategoryController')
 
 router.post('/add', CategoryController.addCategory)
 

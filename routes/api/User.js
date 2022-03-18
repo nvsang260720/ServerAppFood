@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const CartController = require('../controller/Api/CartController')
+const CartController = require('../../controller/Api/CartController')
 
 
 router.post('/add-to-cart', CartController.addCart)

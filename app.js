@@ -7,17 +7,17 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 
-const verifyToken = require('./middleware/auth')
+const verifyToken = require('./middleware/api/auth')
 
-const adminRouter = require('./routes/admin');
-const homeRouter = require('./routes/home')
+const adminRouter = require('./routes/backend/admin');
+const homeRouter = require('./routes/backend/home')
 
 //api
-const API = require('./api/API');
-const ApiAuth = require('./api/Auth');
-const ApiUser = require('./api/User');
-const ApiProduct = require('./api/Product')
-const ApiCategory = require('./api/Category')
+const API = require('./routes/api/API');
+const ApiAuth = require('./routes/api/Auth');
+const ApiUser = require('./routes/api/User');
+const ApiProduct = require('./routes/api/Product')
+const ApiCategory = require('./routes/api/Category')
 
 const connectDB = require('./database/connectDB')
 
@@ -25,15 +25,10 @@ connectDB()
 
 const app = express();
 
-
-// view engine setup
-
-
 app.use(expressLayouts)
 app.set('views', path.join(__dirname, 'views'));
 app.set('layout', './layouts/layout')
 app.set('view engine', 'ejs');
-
 
 app.use(logger('dev'));
 app.use(express.json());

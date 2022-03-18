@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const ProductController = require('../controller/Backend/ProductsController')
-const CategoryController = require('../controller/Backend/CategoryController')
-const AuthController = require('../controller/Backend/AuthController')
-const UserControler = require('../controller/Backend/UserControler')
+const ProductController = require('../../controller/Backend/ProductsController')
+const CategoryController = require('../../controller/Backend/CategoryController')
+const AuthController = require('../../controller/Backend/AuthController')
+const UserControler = require('../../controller/Backend/UserControler')
 
 router.get('/', UserControler.getUser)
 
